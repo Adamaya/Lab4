@@ -21,4 +21,12 @@ public class Student extends Person {
 
     }
 
+    @Override
+    public String toString() {
+        StringBuilder response = new StringBuilder();
+        response.append(super.toString());
+        response.append("my university roll no is " + getUniRollNumber() + " and my current CPI is " + getCurrentCPI());
+        return response.toString();
+    }
+
 }
