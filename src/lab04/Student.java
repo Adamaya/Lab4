@@ -3,7 +3,6 @@ package lab04;
 public class Student extends Person {
     private long uniRollNumber;
     private double currentCPI;
-
     public long getUniRollNumber() {
         return uniRollNumber;
     }
@@ -18,6 +17,14 @@ public class Student extends Person {
 
     public void setCurrentCPI(double currentCPI) {
         this.currentCPI = currentCPI;
+
+    }
+
+
+    public Student(String name, int age, char gender, long uniRollNumber, double currentCPI) {
+        super(name, age, gender);
+        setUniRollNumber(uniRollNumber);
+        setCurrentCPI(currentCPI);
 
     }
 
