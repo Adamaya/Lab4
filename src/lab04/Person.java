@@ -23,14 +23,19 @@ public class Person {
         this.gender=gender;
     }
     public Person(String name,int age,char gender){
+        setGender(gender);
         setName(name);
         setAge(age);
-        setGender(gender);
     }
-}
-class Main{
-    public static void main(String[] args) {
-        Person p1=new Person("Dean", 40, 'm');
 
+    @Override
+    public String toString() {
+        StringBuilder response = new StringBuilder();
+        response.append("my name is " + getName());
+        response.append("I am a " + (String.valueOf(getGender()).equalsIgnoreCase(Character.toString('m')) ? "male" : "female"));
+        response.append(getGender());
+        return response.toString();
     }
 }
+
+/* strings are immutable by default*/
